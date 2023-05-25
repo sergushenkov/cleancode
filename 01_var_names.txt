@@ -1,0 +1,35 @@
+a - PrevPrevFibNumber (prev_prev_fib_number)
+// первое из двух чисел для вычисления следующего числа Фибоначи
+
+b - PrevFibNumber (prev_fib_number)
+// второе из двух чисел для вычисления следующего числа Фибоначи
+
+с - FibNumber (fib_number)
+// число Фибоначи
+
+x - numberToCheck (number_to_check)
+// число для проверки 
+
+factor - divider
+// делитель числа
+
+i - primeNumber (prime_number)
+// простое число 
+
+i - digit (digit)
+// цифра [0-9]
+
+n - gridSize (grid_size)
+// размер решётки
+
+sum - sumOfDigits (sum_of_digits)
+// сумма цифр числа
+
+i - numberOfSequence (number_of_sequence)
+// число последовательности
+
+s - rowOfNumbers (row_of_numbers)
+// строка чисел
+
+n - increasingNumber (increasing_number)
+// увеличиваемое число
