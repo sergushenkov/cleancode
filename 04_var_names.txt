@@ -1,0 +1,32 @@
+limit_1 - hi_water_limit_m
+// веохняя граница уровня воды, в метрах
+
+limit_2 - low_water_limit_m
+// нижняя граница уровня воды, в метрах
+
+volume - volume_liter
+// объем ёмкости в литрах
+
+flow - flow_m3ph
+// поток, куб. метров в час
+
+sum - flow_sum_m3ph
+// суммарный поток, куб. метров в час
+
+min_pipe - min_pipe_section_cm2
+// минимальное сечение трубы, в кв. сантиметрах
+
+pool_list - pools
+// множество бассейнов
+
+time - filling_time_minute
+// время наполнения, в минутах
+
+delta - level_dif_m
+// разность уровней, в метрах
+
+work_time - work_time_sec
+// время работы насоса в секундах
+
+valve_list - valves
+//  список клапанов
