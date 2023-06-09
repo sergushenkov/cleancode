@@ -1,0 +1,35 @@
+read_list_of_food() - parse_txt_to_bag_list()
+// распарсить текст в список рюкзаков с содержимым
+
+calc_sum_calories() - calc_bag_calories()
+// из списка рюкзаков с продуктами получить список суммарного количества калорий в рюкзаках
+
+check_row() - find_max_high_in_row()
+// найти максимальную высоту в текущем ряду на карте
+
+transposition() - transpose_map()
+// транспонировать карту
+
+list_compare() - compare_lists()
+// сравнить списки
+
+copy() - insert_from_table_to_table()
+// вставка в целевую таблицу из таблицы-источника
+
+pxf() - create_pxf_table()
+// создать таблицу для pxf
+
+safe_temp() - query_to_temp_table()
+// сохранить результат запроса во временную таблицу
+
+check() - check_table_existence()
+// проверить существование данной таблицы
+
+size() - get_table_size_Mb()
+// вернуть размер таблицы в Мб
+
+split_name() - split_full_table_name()
+// распарсить полное имя таблицы на схему и имя
+
+check_user() - get_user_groups()
+// получить список ролей у пользователя
