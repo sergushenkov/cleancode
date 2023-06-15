@@ -1,0 +1,32 @@
+FIBONACCI_LIMIT = 4_000_000
+// in the Fibonacci sequence whose values do not exceed four million
+
+NUMBER_FOR_CHECK = 600851475143
+// число для определения максимального простого делителя
+
+HIGH_LIMIT = 999
+LOW_LIMIT = 100
+// верхний и нижний пределы для перебора чисел из 3 цифр
+
+NUMBER_OF_NUMBERS = 100
+// количество первых натуральных чисел для задачи
+
+COUNT_PRIME_NUMBERS = 10_000
+// порядковое простое число
+
+SUM_HIGH_LIMIT = 2_000_000
+// Find the sum of all the primes below two million
+
+GRID_SIZE = 20
+// How many such routes are there through a 20×20 grid?
+
+DEGRI = 1000
+// What is the sum of the digits of the number 2**1000?
+
+MIN_NUMBER = 1
+MAX_NUMBER = 1000
+// If all the numbers from 1 to 1000 (one thousand) inclusive were written out in words, 
+how many letters would be used
+
+DEGRI_OF_FACTORISL = 100
+// HFind the sum of the digits in the number 100!
