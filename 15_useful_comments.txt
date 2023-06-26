@@ -1,0 +1,36 @@
+Как написал в предыдущем задании - комментарии практически не использую в python коде (потому что простой и короткий), но активно использую в SQL запросах (для документации изменений и потому что без комментариев разобраться в фрагменте реально сложно)
+
+1. Информативные комментарии
+    /* вычисляем продуктовую группу */
+
+    left join ce_ct /* берем признак препейда DWPS-1018 */
+
+2. Представление намерений
+    , t.value  /* DEBUG 07.06.2023 */
+
+3. Прояснение
+    , case
+        when substr(ct.i002_number, 1, 1)::smallint = 4 then 8010  /* Visa */
+        when substr(ct.i002_number, 1, 2)::smallint between 51 and 55 
+            or substr(ct.i002_number, 1, 4)::smallint between 2221 and 2720 then 8305  /* MasterCard */
+        when substr(ct.i002_number, 1, 3)::smallint = 220 then 8002  /* MIR */
+        when substr(ct.i002_number, 1, 1) = '6' then 8370  /* PSA-3311: UP */
+    end as ps_code
+
+    /* PSA-3311: после 22.10.22 дополнительный анализ типа операции для e-com для КФС, 
+    если typeserno_alloc = 860 и terminal_type = 5,6, то КФС нужно относить к екому, а не к апос, как остальной 860 */
+
+    and ci.i018_merch_type not in ('9211', '9222', '9223', '9311', '8398', '6012') /* ограничение по MCC на A-Pos из задачи DWPS-1050 */
+
+    or ct.typeserno_alloc = 540  /* PSA-4113: добавляем тип 540 КАИ */
+
+4. Предупреждение о последствиях
+    /* из prod_v_stg.onl_authorizations похоже брали сумму по валютным проводкам, таких сейчас нет - отказались чтобы перенести ноут на обычный gp - 19-06-2023*/
+    -- left join prod_v_stg.onl_authorizations auth /*BIOR-1420*/
+    -- on auth.serno = ci.authserno + 13000000000 /*DWPS-663, доработать после BIV-591*/
+
+5. Усиление
+    and cde.icdetrnnum is not null /* 27.02.2023 добавил фильтры чтобы убрать перекос после Redistribution Motion */
+
+6. Комментарии TODO
+/* TODO убрать Broadcast motion: 18513371 строк */
